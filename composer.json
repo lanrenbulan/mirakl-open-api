@@ -1,7 +1,7 @@
 {
   "name": "doubler/mirakl-open-api",
   "description": "Mirakl Open API SDK",
-  "license": "Apache License",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Doubler\\MiraklOpenApi\\": "src/"
