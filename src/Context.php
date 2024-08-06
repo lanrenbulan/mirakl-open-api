@@ -26,7 +26,7 @@ class Context
 
     public function getGatewayUri(): string
     {
-        if (!isset($this->config['api_key'])) {
+        if (!isset($this->config['gateway_uri'])) {
             throw new InvalidArgumentException('Gateway uri is required.');
         }
 
