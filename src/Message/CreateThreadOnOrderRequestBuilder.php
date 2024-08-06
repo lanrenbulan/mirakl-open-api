@@ -5,19 +5,16 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Message;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
-class ReplyThreadRequestBuilder extends AbstractRequestBuilder
+
+class CreateThreadOnOrderRequestBuilder extends AbstractRequestBuilder
 {
-    private string $threadId;
+    private string $orderId;
 
     protected string $method = 'POST';
 
-    /**
-     * @param string $threadId
-     * @return $this
-     */
-    public function setThreadId(string $threadId): self
+    public function setOrderId(string $orderId): self
     {
-        $this->threadId = $threadId;
+        $this->orderId = $orderId;
 
         return $this;
     }
@@ -46,6 +43,6 @@ class ReplyThreadRequestBuilder extends AbstractRequestBuilder
 
     protected function getApiPath(): string
     {
-        return '/api/inbox/threads/' . $this->threadId . '/message';
+        return '/api/orders/' . $this->orderId . '/threads';
     }
 }

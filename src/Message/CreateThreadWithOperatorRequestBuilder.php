@@ -5,22 +5,10 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Message;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
-class ReplyThreadRequestBuilder extends AbstractRequestBuilder
+
+class CreateThreadWithOperatorRequestBuilder extends AbstractRequestBuilder
 {
-    private string $threadId;
-
     protected string $method = 'POST';
-
-    /**
-     * @param string $threadId
-     * @return $this
-     */
-    public function setThreadId(string $threadId): self
-    {
-        $this->threadId = $threadId;
-
-        return $this;
-    }
 
     /**
      * @param array $files
@@ -46,6 +34,6 @@ class ReplyThreadRequestBuilder extends AbstractRequestBuilder
 
     protected function getApiPath(): string
     {
-        return '/api/inbox/threads/' . $this->threadId . '/message';
+        return '/api/inbox/threads';
     }
 }

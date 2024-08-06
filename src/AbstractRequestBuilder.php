@@ -1,11 +1,6 @@
 <?php
-/**
- * This file is part of doubler.
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the MIT-LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- */
+
+declare(strict_types=1);
 
 namespace Doubler\MiraklOpenApi;
 
@@ -22,6 +17,11 @@ abstract class AbstractRequestBuilder
         $this->context = $context;
     }
 
+    protected function getGatewayUri(): string
+    {
+        return $this->context->getGatewayUri();
+    }
+
     public function setShopId(string $shopId): self
     {
         $this->queryParams['shop_id'] = $shopId;
@@ -29,8 +29,8 @@ abstract class AbstractRequestBuilder
         return $this;
     }
 
-    protected function getGatewayUri(): string
+    protected function beforeBuildRequest(): void
     {
-        return $this->context->getGatewayUri();
+        $this->headers['Authorization'] = $this->context->getApiKey();
     }
 }
