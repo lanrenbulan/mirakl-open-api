@@ -16,6 +16,6 @@
   ],
   "require": {
     "ext-json": "*",
-    "doubler/open-api-sdk": "^1.1.0"
+    "doubler/open-api-sdk": "^2.0.0"
   }
 }
