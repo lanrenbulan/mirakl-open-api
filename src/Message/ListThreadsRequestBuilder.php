@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Message;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
+use Doubler\MiraklOpenApi\PageTokenTrait;
 
 class ListThreadsRequestBuilder extends AbstractRequestBuilder
 {
+    use PageTokenTrait;
+
     /**
      * @param string $entityType MMP_ORDER, MMP_OFFER, MPS_ORDER, MPS_SERVICE, SELLER_OPERATOR
      * @return $this
