@@ -84,29 +84,43 @@ class ListOrdersRequestBuilder extends AbstractRequestBuilder
     }
 
     /**
-     * @param string $startDate DateTime
+     * @param string $startCreateDate
      * @return $this
      */
-    public function setStartDate(string $startDate): self
+    public function setStartCreateDate(string $startCreateDate): self
     {
-        $this->queryParams['start_date'] = $startDate;
+        $this->queryParams['start_date'] = $startCreateDate;
 
         return $this;
     }
 
     /**
-     * @param string $endDate DateTime
+     * @param string $endCreateDate
      * @return $this
      */
-    public function setEndDate(string $endDate): self
+    public function setEndCreateDate(string $endCreateDate): self
     {
-        $this->queryParams['end_date'] = $endDate;
+        $this->queryParams['end_date'] = $endCreateDate;
 
         return $this;
     }
 
     /**
-     * @param string $startUpdateDate DateTime
+     * @param string $startCreateDate
+     * @param string $endCreateDate
+     * @return $this
+     */
+    public function setCreateDate(string $startCreateDate, string $endCreateDate): self
+    {
+        $this->setStartCreateDate($startCreateDate);
+
+        $this->setStartCreateDate($endCreateDate);
+
+        return $this;
+    }
+
+    /**
+     * @param string $startUpdateDate
      * @return $this
      */
     public function setStartUpdateDate(string $startUpdateDate): self
@@ -117,12 +131,26 @@ class ListOrdersRequestBuilder extends AbstractRequestBuilder
     }
 
     /**
-     * @param string $startEndDate DateTime
+     * @param string $endUpdateDate
      * @return $this
      */
-    public function setEndUpdateDate(string $startEndDate): self
+    public function setEndUpdateDate(string $endUpdateDate): self
     {
-        $this->queryParams['end_update_date'] = $startEndDate;
+        $this->queryParams['end_update_date'] = $endUpdateDate;
+
+        return $this;
+    }
+
+    /**
+     * @param string $startDate
+     * @param string $endDate
+     * @return $this
+     */
+    public function setUpdateDate(string $startDate, string $endDate): self
+    {
+        $this->setStartUpdateDate($startDate);
+
+        $this->setEndUpdateDate($endDate);
 
         return $this;
     }
