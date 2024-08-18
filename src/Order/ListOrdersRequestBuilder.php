@@ -220,11 +220,10 @@ class ListOrdersRequestBuilder extends AbstractRequestBuilder
 
     protected function getApiPath(): string
     {
-        return '/api/inbox/threads';
+        return '/api/orders';
     }
 
     /**
-     * @param array $params
      * @return string
      */
     protected function getQueryStr(): string
