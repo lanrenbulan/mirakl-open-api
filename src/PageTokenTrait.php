@@ -10,4 +10,11 @@ trait PageTokenTrait
 
         return $this;
     }
+
+    public function setLimit(int $limit): static
+    {
+        $this->queryParams['limit'] = $limit;
+
+        return $this;
+    }
 }
