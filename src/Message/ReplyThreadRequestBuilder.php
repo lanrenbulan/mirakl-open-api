@@ -17,8 +17,6 @@ class ReplyThreadRequestBuilder extends AbstractRequestBuilder
     public function __construct(Context $context)
     {
         parent::__construct($context);
-
-        $this->headers['Content-Type'] = 'multipart/form-data';
     }
 
     /**
