@@ -45,6 +45,17 @@ class ListThreadsRequestBuilder extends AbstractRequestBuilder
     }
 
     /**
+     * @param bool $withMessage
+     * @return $this
+     */
+    public function setWithMessages(bool $withMessage): self
+    {
+        $this->queryParams['with_messages'] = $withMessage ? 'true' : 'false';
+
+        return $this;
+    }
+
+    /**
      * @return $this
      */
     public function withMessages(): self
