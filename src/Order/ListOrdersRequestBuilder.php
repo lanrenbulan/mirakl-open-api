@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Order;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
-use Doubler\MiraklOpenApi\PageTrait;
+use Doubler\MiraklOpenApi\OffsetPageTrait;
 
 class ListOrdersRequestBuilder extends AbstractRequestBuilder
 {
-    use PageTrait;
+    use OffsetPageTrait;
 
     /**
      * @param string[] $orderIds

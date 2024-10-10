@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Offer;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
-use Doubler\MiraklOpenApi\PageTrait;
+use Doubler\MiraklOpenApi\OffsetPageTrait;
 
 class ListOffersRequestBuilder extends AbstractRequestBuilder
 {
-    use PageTrait;
+    use OffsetPageTrait;
 
     /**
      * @param string[] $offerStateCodes

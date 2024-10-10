@@ -2,7 +2,7 @@
 
 namespace Doubler\MiraklOpenApi;
 
-trait PageTrait
+trait OffsetPageTrait
 {
     public function setMax(int $max): static
     {
