@@ -8,13 +8,13 @@ use Doubler\MiraklOpenApi\AbstractRequestBuilder;
 
 class GetOfferRequestBuilder extends AbstractRequestBuilder
 {
-    private string $offerId;
+    private int $offerId;
 
     /**
-     * @param string $offerId
+     * @param int $offerId
      * @return $this
      */
-    public function setOfferId(string $offerId): self
+    public function setOfferId(int $offerId): self
     {
         $this->offerId = $offerId;
 
