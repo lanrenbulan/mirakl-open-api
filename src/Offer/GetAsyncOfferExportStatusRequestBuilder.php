@@ -8,8 +8,6 @@ use Doubler\MiraklOpenApi\AbstractRequestBuilder;
 
 class GetAsyncOfferExportStatusRequestBuilder extends AbstractRequestBuilder
 {
-    protected string $method = 'POST';
-
     private string $trackingId;
 
     /**
