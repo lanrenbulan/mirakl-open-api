@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Doubler\MiraklOpenApi\Message;
 
-use Doubler\MiraklOpenApi\AbstractRequestBuilder;
-
 class MessageInputBuilder
 {
     private array $data = [];

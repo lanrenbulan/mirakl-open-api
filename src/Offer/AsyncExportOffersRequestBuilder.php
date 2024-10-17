@@ -5,10 +5,18 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Offer;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
+use Doubler\MiraklOpenApi\Context;
 
 class AsyncExportOffersRequestBuilder extends AbstractRequestBuilder
 {
     protected string $method = 'POST';
+
+    public function __construct(Context $context)
+    {
+        parent::__construct($context);
+
+        $this->headers['Content-Type'] = 'application/json';
+    }
 
     /**
      * @param string $reportType

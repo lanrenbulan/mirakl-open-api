@@ -14,11 +14,6 @@ class ReplyThreadRequestBuilder extends AbstractRequestBuilder
 
     protected string $method = 'POST';
 
-    public function __construct(Context $context)
-    {
-        parent::__construct($context);
-    }
-
     /**
      * @param string $threadId
      * @return $this
