@@ -6,7 +6,7 @@ namespace Doubler\MiraklOpenApi\Offer;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
 
-class GetAsyncExportOffersStatusRequestBuilder extends AbstractRequestBuilder
+class GetAsyncOfferExportStatusRequestBuilder extends AbstractRequestBuilder
 {
     protected string $method = 'POST';
 

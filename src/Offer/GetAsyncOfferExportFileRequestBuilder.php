@@ -6,7 +6,7 @@ namespace Doubler\MiraklOpenApi\Offer;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
 
-class GetAsyncExportOffersFileRequestBuilder extends AbstractRequestBuilder
+class GetAsyncOfferExportFileRequestBuilder extends AbstractRequestBuilder
 {
     private string $trackingId;
 
