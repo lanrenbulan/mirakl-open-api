@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Message;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
-use Doubler\MiraklOpenApi\Context;
 use GuzzleHttp\Psr7\Utils;
 
 class ReplyThreadRequestBuilder extends AbstractRequestBuilder
