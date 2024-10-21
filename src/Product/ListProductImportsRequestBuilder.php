@@ -5,14 +5,17 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Product;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
+use Doubler\MiraklOpenApi\OffsetPageTrait;
 
 class ListProductImportsRequestBuilder extends AbstractRequestBuilder
 {
+    use OffsetPageTrait;
+
     /**
      * @param string $lastRequestDate
      * @return $this
      */
-    public function setTrackingId(string $lastRequestDate): static
+    public function setLastRequestDate(string $lastRequestDate): static
     {
         $this->queryParams['last_request_date'] = $lastRequestDate;
 
