@@ -11,11 +11,11 @@ class ImportProductRequestBuilder extends AbstractRequestBuilder
 {
     protected string $method = 'POST';
 
-    public function setFile(string $file, string $type = 'csv'): self
+    public function setFile(string $name, string $file): self
     {
         $this->bodyParams['file'] = [
             'name' => 'file',
-            'filename' => 'product_import.' . $type,
+            'filename' => $name,
             'contents' => Utils::tryFopen($file, 'r'),
         ];
 
