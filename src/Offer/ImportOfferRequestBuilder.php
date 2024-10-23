@@ -51,10 +51,10 @@ class ImportOfferRequestBuilder extends AbstractRequestBuilder
     }
 
     /**
-     * @param bool $importMode
+     * @param string $importMode
      * @return $this
      */
-    public function setImportMode(bool $importMode): self
+    public function setImportMode(string $importMode): self
     {
         $this->bodyParams['import_mode'] = [
             'name' => 'import_mode',
