@@ -6,7 +6,7 @@ namespace Doubler\MiraklOpenApi\Order;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
 
-class RequestRefundsOnOrderLinesRequestBuilder extends AbstractRequestBuilder
+class PerformOrderLineRefundRequestBuilder extends AbstractRequestBuilder
 {
     protected string $method = 'PUT';
 
