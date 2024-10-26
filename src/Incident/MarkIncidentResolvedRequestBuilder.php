@@ -10,6 +10,8 @@ class MarkIncidentResolvedRequestBuilder extends AbstractRequestBuilder
 
     private string $line;
 
+    protected string $method = 'PUT';
+
     /**
      * @param string $orderId
      * @return $this
@@ -28,6 +30,17 @@ class MarkIncidentResolvedRequestBuilder extends AbstractRequestBuilder
     public function setLine(string $line): self
     {
         $this->line = $line;
+
+        return $this;
+    }
+
+    /**
+     * @param string $reasonCode
+     * @return $this
+     */
+    public function setReasonCode(string $reasonCode): self
+    {
+        $this->bodyParams['reason_code'] = $reasonCode;
 
         return $this;
     }
