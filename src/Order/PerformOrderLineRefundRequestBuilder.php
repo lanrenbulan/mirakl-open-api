@@ -14,7 +14,7 @@ class PerformOrderLineRefundRequestBuilder extends AbstractRequestBuilder
      * @param string $orderTaxMode
      * @return $this
      */
-    public function setOrder_tax_mode(string $orderTaxMode): self
+    public function setOrderTaxMode(string $orderTaxMode): self
     {
         $this->bodyParams['order_tax_mode'] = $orderTaxMode;
 
