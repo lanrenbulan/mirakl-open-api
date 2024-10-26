@@ -5,10 +5,18 @@ declare(strict_types=1);
 namespace Doubler\MiraklOpenApi\Order;
 
 use Doubler\MiraklOpenApi\AbstractRequestBuilder;
+use Doubler\MiraklOpenApi\Context;
 
 class PerformOrderLineRefundRequestBuilder extends AbstractRequestBuilder
 {
     protected string $method = 'PUT';
+
+    public function __construct(Context $context)
+    {
+        parent::__construct($context);
+
+        $this->headers['Content-Type'] = 'application/json';
+    }
 
     /**
      *
