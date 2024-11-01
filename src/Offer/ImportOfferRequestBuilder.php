@@ -70,11 +70,15 @@ class ImportOfferRequestBuilder extends AbstractRequestBuilder
 
         $elements[] = $this->bodyParams['file'];
 
-        $elements[] = $this->bodyParams['operator_format'];
-
-        $elements[] = $this->bodyParams['with_products'];
-
         $elements[] = $this->bodyParams['import_mode'];
+
+        if (isset($this->bodyParams['operator_format'])) {
+            $elements[] = $this->bodyParams['operator_format'];
+        }
+
+        if (isset($this->bodyParams['with_products'])) {
+            $elements[] = $this->bodyParams['with_products'];
+        }
 
         $this->bodyParams = $elements;
     }

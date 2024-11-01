@@ -42,7 +42,9 @@ class ImportProductRequestBuilder extends AbstractRequestBuilder
 
         $elements[] = $this->bodyParams['file'];
 
-        $elements[] = $this->bodyParams['message_input'];
+        if (isset($this->bodyParams['operator_format'])) {
+            $elements[] = $this->bodyParams['operator_format'];
+        }
 
         $this->bodyParams = $elements;
     }
