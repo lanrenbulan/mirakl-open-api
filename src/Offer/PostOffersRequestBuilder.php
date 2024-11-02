@@ -9,6 +9,8 @@ use Doubler\MiraklOpenApi\Context;
 
 class PostOffersRequestBuilder extends AbstractRequestBuilder
 {
+    protected string $method = 'POST';
+
     public function __construct(Context $context)
     {
         parent::__construct($context);
